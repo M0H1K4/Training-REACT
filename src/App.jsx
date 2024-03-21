@@ -1,29 +1,28 @@
 import React, { useState } from "react";
 import "./App.css";
 
-const products = [
-  { title: "Cabbage", isFruit: false, id: 1 },
-  { title: "Garlic", isFruit: false, id: 2 },
-  { title: "Apple", isFruit: true, id: 3 },
-];
-
 function App() {
-  const listItems = products.map((product) => (
-    <li
-      key={product.id}
-      style={{
-        color: product.isFruit ? "magenta" : "darkgreen",
-      }}
-    >
-      {product.title}
-    </li>
-  ));
+
 
   return (
     <>
-     <ul>{listItems}</ul>
+    <h1>დააჭირე აბა ბოზოოოოოოოო</h1>
+    <MyButton/>
+    <MyButton/>
     </>
   );
+}
+
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  const HandleClick = () => {
+    setCount(count + 1);
+  };
+  return <>
+    <button onClick={HandleClick}>Clicked {count} times</button>
+
+  </>;
 }
 
 export default App;
