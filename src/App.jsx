@@ -2,27 +2,28 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-
+function HandleClickAlert(){
+  alert("What ar u doin bro");
+}
 
   return (
     <>
-    <h1>დააჭირე აბა ბოზოოოოოოოო</h1>
-    <MyButton/>
-    <MyButton/>
+    <button onClick={HandleClickAlert}>Don't click on this button</button>
     </>
   );
 }
 
-function MyButton() {
-  const [count, setCount] = useState(0);
 
-  const HandleClick = () => {
-    setCount(count + 1);
-  };
-  return <>
-    <button onClick={HandleClick}>Clicked {count} times</button>
+// function MyButton() {
+//   const [count, setCount] = useState(0);
 
-  </>;
-}
+//   const HandleClick = () => {
+//     setCount(count + 1);
+//   };
+//   return <>
+//     <button onClick={HandleClick}>Clicked {count} times</button>
+
+//   </>;
+// }
 
 export default App;
